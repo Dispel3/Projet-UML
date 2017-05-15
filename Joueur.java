@@ -1,8 +1,10 @@
-public class Joueur
+import java.util.*;
+
+public class Joueur extends Partie
 {
 	private String CouleurPions;
 	private String Nom;
-	public List<Pièce> pièce = new ArrayList<Pièce> (); 
+	public List<Piece> Piece = new ArrayList<Piece>(); 
 
 	public Joueur(String nom, String couleur)
 	{
@@ -10,15 +12,13 @@ public class Joueur
 			this.CouleurPions = couleur;
 	}
 	
-	public void bougerPiece(int x,int y)
+	public void bougerPiece(Piece p,int x,int y)
 	{
-		if( piece.mouvementPiece(x,y) == true)
+		if( super.testMouvement())
 		{
 			System.out.println("Déplacment Valide");
-			piece.setOrdonnée(x);
-			piece.setAbscisse(y);
+			p.mouvementPiece(x,y);
 		}
-
 		else
 		{
 			System.out.println("Déplacement Invalide");
@@ -26,9 +26,8 @@ public class Joueur
 	}
 							
 	public void abandonnerPartie()
-	{  
-														
-		System.out.println("FIN PARTIE");
+	{  											
+		System.out.println("FIN DE LA PARTIE");
 		return;
 	}
     

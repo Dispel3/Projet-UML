@@ -1,7 +1,7 @@
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+//import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-
-public class Case implements Variables {
+public class Case implements Variables
+{
 
 	private String couleur;
 	private int x;

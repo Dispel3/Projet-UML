@@ -1,24 +1,19 @@
 public abstract class Piece implements Variables
 {
 	private String couleur;
-	private String symbole;
-
-	public abstract void mouvementPiece();
+	private int symbole;
+	public abstract void mouvementPiece(int x,int y);
 	
-	public Piece()
+	public Piece(String c,int s)
 	{
-
-
+		this.couleur = c;
+		this.symbole = s;
 	}
-
-	public abstract mouvement() {};
-	public abstract actions() {};
-
 	public String getCouleur()
 	{
 		return this.couleur;
 	}
-	public String getSymbole()
+	public int getSymbole()
 	{
 		return this.symbole;
 	}
@@ -26,13 +21,13 @@ public abstract class Piece implements Variables
 	{
 		this.couleur = c;
 	}
-	public void setSymbole(String t)
+	public void setSymbole(int t)
 	{
 		this.symbole = t;
 	}
 	public String toString()
 	{
-		return "rangee: " + this.rangee + "colonne: " + this.colonne + "couleur: "+this.couleur + " type: "+ this.symbole + "\n";
+		return "couleur: " + this.couleur + " type: "+ this.symbole + "\n";
 		
 	}
 }

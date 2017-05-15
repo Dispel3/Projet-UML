@@ -1,22 +1,8 @@
-public class Verifieur
+public interface Verifieur
 {
 
-	public void testMouvement()
-	{
-
-	}
-
-
-	public void Mat()
-	{
-	
-	}
-
-
-	public void Pat()
-	{
-
-	}
-
+	public boolean testMouvement();
+	public boolean mat();
+	public boolean pat();
 
 }

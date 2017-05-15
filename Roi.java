@@ -1,11 +1,18 @@
-public class Roi extend Piece
+public class Roi extends Piece
 {
-	public Piece()
+
+
+	public Roi(String couleur)
 	{
-		super();
+	    super(couleur,"");
+	    if(couleur == "BLANC")
+	        super.setSymbole("ROI_BLANC");
+	    else
+	        super.setSymbole("ROI_NOIR");
 	}
-	public void mouvement(int r,int c)
+	public void mouvementPiece(int x,int y)
 	{
+	
 /*
 // déplacement diagonale vers droite
 		if ( r-1 == super.rangee && c-1 == super.rangee )
@@ -32,7 +39,7 @@ public class Roi extend Piece
 			System.out.println("déplacement non autorisé");
 			return;
 		}
-*/
+
 // autre déplacement
 		if ( r >= super.ranger + 2 || c >= super.rangee + 2 || r >= super.ranger-2 || c <= super.ranger-2)
 		{
@@ -43,11 +50,9 @@ public class Roi extend Piece
 		else
 		{
 			super.rangee = r;
-			super.colonne = c;
-		}
-	}
-	public void actions(Piece p)
-	{
-		if (p.rangee 	
+			super.colonne = c;  
+		} 
+*/
+
 	}
 }

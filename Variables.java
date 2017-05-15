@@ -1,7 +1,7 @@
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
+//import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-
-public interface Variables {
+public interface Variables
+{
 
 	public static final String BLANC = "Blanc";
 	public static final String NOIR = "Noir";
